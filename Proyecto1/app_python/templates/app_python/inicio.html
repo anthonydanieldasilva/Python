@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'app_python/css/bootstrap.css'%}" rel="stylesheet"/>
+    <link href="{% static 'app_python/css/selfstyle.css'%}" rel="stylesheet"/>
+    <title>Inicio</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'productos' %}">Productos</a>
+        <a href="{% url 'clientes' %}">Clientes</a>
+        <a href="{% url 'info' %}">Sobre nosotros</a>
+        <a href="{% url 'contacto' %}">Contacto</a>
+        <div class="animation start-home"></div>
+    </nav>
+    {%block Contenedor_intercambiable%}
+    {%endblock%}
+</body>
+</html>
