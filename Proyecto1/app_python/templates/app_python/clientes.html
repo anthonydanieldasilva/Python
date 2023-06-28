@@ -3,6 +3,39 @@
 
 {%block Contenedor_intercambiable%}
 
-    <p>HOLA SOY CLIENTE</p>
+    <h1>Clientes</h1>
+
+    <h4>Agrega un nuevo cliente :</h4>
+
+    <form action="/app_python/clientes" method="post"> {% csrf_token %}
+
+
+        <input placeholder="Nombre" type = "text" name="nombre_cliente" required>
+        <input placeholder="Apellido" type = "text" name="apellido_cliente" required>
+        <input placeholder="Dirección" type = "text" name="direccion_cliente" required>
+        <input placeholder="Telefono Celular" type = "text" name="telefono_cliente" required>
+
+        <input type = "submit" value="Enviar">
+    </form>
+
+    <h4>Consultar cliente :</h4>
+
+    <form action="/app_python/clientes" method="get">
+
+        <input placeholder="Nombre de cliente" type="text" name="nombre_cliente" id="nombre_cliente">
+        <input type="submit" value="Buscar">
+
+
+        {% if clientes %}
+            {% for cleinte in clientes %}
+                <li> {{clientes.nombre_cliente}} </li>
+                <li> {{clientes.apellido_cliente}} </li>
+                <li> {{clientes.telefono_cliente}} </li>
+            {% endfor %}
+        {% endif %}
+
+    </form>
+
+    
 
 {%endblock%}

@@ -1,0 +1,16 @@
+<div>
+    {%extends "app_python/clientes.html"%}
+    {% load static %}
+    
+    {% block addcliente %}
+        <p>Crear cliente</p>
+        <form action="/app_python/serchcliente " method="post"> {% csrf_token %}
+            <table>
+                
+            </table>
+
+            <input type = "submit" value="Enviar">
+        </form>
+        
+    {% endblock %}    
+</div>

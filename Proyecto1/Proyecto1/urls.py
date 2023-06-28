@@ -19,7 +19,7 @@ from django.urls import path, include
 from Proyecto1.views import saludo , segundaVista
 
 urlpatterns = [
-    path('', saludo),
+    path('',saludo),
     path('admin/', admin.site.urls),
     path('saludo/',saludo),
     path('segundaVista/',segundaVista),
