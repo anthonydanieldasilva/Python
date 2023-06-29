@@ -40,7 +40,7 @@ def loginweb ( request ):
 
 # vistas de html nav #
 
-# metodos de creacion y busqueda clientes #
+# metodos de creacion y busqueda clientes
 
 def add_clientes( request ):
     if request.method == 'POST':
